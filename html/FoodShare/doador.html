@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Doador - FoodShare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="logo"><a href="index.html"><img src="img/logo.svg" alt=""> FoodShare</a></h1>
+        <nav>
+            <a href="#cadastrar">Cadastrar alimento</a>
+            <a href="#meus-alimentos">Meus alimentos</a>
+            <a href="#solicitacoes">Solicitações</a>
+            <a href="#historico">Histórico</a>
+            <span class="saudacao" id="saudacao"></span>
+            <a href="#" class="btn-entrar" id="btnSair">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="secao" id="conquistas">
+            <div class="conquista">
+                <div>
+                    <strong id="nivel"></strong>
+                    <p id="progresso"></p>
+                </div>
+            </div>
+        </section>
+
+        <div class="colunas secao">
+            <section id="cadastrar" class="caixa">
+                <h2>Cadastrar alimento</h2>
+                <form id="formAlimento">
+                    <label for="nomeAlimento">Nome do alimento</label>
+                    <input type="text" id="nomeAlimento">
+
+                    <label for="categoriaAlimento">Categoria</label>
+                    <select id="categoriaAlimento">
+                        <option value="">Selecione...</option>
+                        <option>Refeições Preparadas</option>
+                        <option>Hortifrúti</option>
+                        <option>Padaria e Confeitaria</option>
+                        <option>Outros</option>
+                    </select>
+
+                    <label for="qtdAlimento">Quantidade / número de marmitas</label>
+                    <input type="text" id="qtdAlimento">
+
+                    <label for="validade">Prazo de validade / horário limite</label>
+                    <input type="text" id="validade" placeholder="Retirar até 16h">
+
+                    <label for="obs">Observações para a retirada</label>
+                    <textarea id="obs" rows="3"></textarea>
+
+                    <button type="submit">Cadastrar alimento</button>
+                    <p class="aviso" id="msgAlimento"></p>
+                </form>
+            </section>
+
+            <section id="meus-alimentos" class="caixa">
+                <h2>Meus alimentos</h2>
+                <div class="lista" id="listaAlimentos"></div>
+            </section>
+        </div>
+
+        <section class="secao" id="solicitacoes">
+            <h2>Solicitações recebidas</h2>
+            <div class="lista" id="listaSolicitacoes"></div>
+        </section>
+
+        <section class="secao" id="historico">
+            <h2>Histórico de doações</h2>
+            <div class="lista" id="listaHistorico"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>FoodShare 2026 - Sustentabilidade • Comunidade • Transparência</p>
+    </footer>
+
+    <script src="js/doador.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área da Instituição - FoodShare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="logo"><a href="index.html"><img src="img/logo.svg" alt=""> FoodShare</a></h1>
+        <nav>
+            <a href="#alimentos">Alimentos disponíveis</a>
+            <a href="#solicitar">Solicitar doação</a>
+            <a href="#minhas-solicitacoes">Minhas solicitações</a>
+            <a href="#historico">Histórico</a>
+            <span class="saudacao" id="saudacao"></span>
+            <a href="#" class="btn-entrar" id="btnSair">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="secao" id="alimentos">
+            <h2>Alimentos disponíveis</h2>
+            <div class="filtros" id="filtros">
+                <button type="button" data-cat="Todos" class="ativo">Todos</button>
+                <button type="button" data-cat="Refeições Preparadas">Refeições Preparadas</button>
+                <button type="button" data-cat="Hortifrúti">Hortifrúti</button>
+                <button type="button" data-cat="Padaria e Confeitaria">Padaria e Confeitaria</button>
+                <button type="button" data-cat="Outros">Outros</button>
+            </div>
+            <div class="lista" id="listaAlimentos"></div>
+        </section>
+
+        <div class="colunas secao">
+            <section id="solicitar" class="caixa">
+                <h2>Solicitar doação</h2>
+                <form id="formSolicitacao">
+                    <label for="itemSolicitado">Alimento</label>
+                    <select id="itemSolicitado"></select>
+
+                    <label><input type="checkbox" id="temTransporte" checked> Possuímos transporte próprio para buscar a doação</label>
+
+                    <label for="mensagem">Mensagem para o doador</label>
+                    <textarea id="mensagem" rows="3"></textarea>
+
+                    <button type="submit">Enviar solicitação</button>
+                    <p class="aviso" id="msgSolicitacao"></p>
+                </form>
+            </section>
+
+            <section id="minhas-solicitacoes" class="caixa">
+                <h2>Minhas solicitações</h2>
+                <div class="lista" id="listaSolicitacoes"></div>
+            </section>
+        </div>
+
+        <section class="secao" id="historico">
+            <h2>Histórico de doações recebidas</h2>
+            <div class="lista" id="listaHistorico"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>FoodShare 2026 - Sustentabilidade • Comunidade • Transparência</p>
+    </footer>
+
+    <script src="js/instituicao.js"></script>
+</body>
+</html>

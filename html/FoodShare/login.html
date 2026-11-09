@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - FoodShare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-login">
+
+    <header>
+        <h1 class="logo"><a href="index.html"><img src="img/logo.svg" alt=""> FoodShare</a></h1>
+        <nav>
+            <a href="index.html">Início</a>
+        </nav>
+    </header>
+
+    <main class="login-area">
+        <div class="login-box">
+
+            <div class="abas">
+                <button type="button" id="abaLogin" class="ativo">Entrar</button>
+                <button type="button" id="abaCadastro">Criar conta</button>
+            </div>
+
+            <section class="caixa" id="painelLogin">
+                <h2>Entrar no FoodShare</h2>
+                <form id="formLogin">
+                    <label for="loginEmail">E-mail</label>
+                    <input type="email" id="loginEmail">
+
+                    <label for="loginSenha">Senha</label>
+                    <input type="password" id="loginSenha">
+
+                    <button type="submit">Entrar</button>
+                    <p class="aviso" id="msgLogin"></p>
+                </form>
+            </section>
+
+            <section class="caixa" id="painelCadastro" hidden>
+                <h2>Criar conta</h2>
+                <form id="formCadastro">
+                    <p>Você é:</p>
+                    <label><input type="radio" name="tipo" value="Doador" checked> Doador (restaurante, padaria ou supermercado)</label>
+                    <label><input type="radio" name="tipo" value="Instituição"> Instituição beneficente</label>
+
+                    <label for="cadNome" id="labelNome">Nome do estabelecimento</label>
+                    <input type="text" id="cadNome">
+
+                    <div id="campoEstab">
+                        <label for="cadEstab">Tipo de estabelecimento</label>
+                        <select id="cadEstab">
+                            <option>Restaurante</option>
+                            <option>Padaria</option>
+                            <option>Supermercado</option>
+                        </select>
+                    </div>
+
+                    <label for="cadEmail">E-mail</label>
+                    <input type="email" id="cadEmail">
+
+                    <label for="cadSenha">Senha (mínimo 8 caracteres)</label>
+                    <input type="password" id="cadSenha">
+
+                    <button type="submit">Criar conta</button>
+                    <p class="aviso" id="msgCadastro"></p>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>FoodShare 2026 - Sustentabilidade • Comunidade • Transparência</p>
+    </footer>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
